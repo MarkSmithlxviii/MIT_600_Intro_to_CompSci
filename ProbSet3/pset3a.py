@@ -10,4 +10,6 @@ Created on Tue Jul 15 13:42:09 2014
 
 from string import *
 
-
+def countSubStringMatch(target,key):
+    find(target,key)
+    return 
