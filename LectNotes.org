@@ -1,0 +1,17 @@
+# Author Mark Smith
+
+Notes taken while listening to the [[http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/index.htm][MIT 600]] spring 2011 online lecture videos.
+
+* Lecture one
+** Aim of the course
+We want to be able to map a  problem to a computational framework.
+We will be able to write small and medium sized problems.
+How well can we solve problems.
+Studies indicate that students learn more if they take their own notes.
+Programing is fun! 
+Learn computational problem solving
+** What is computation
+There are basically two types of knowledge
+ - Declerative - statements of fact eg. "A good health care plan improves the
+   quality of medical care while saving money"
+ - Imperitive 
