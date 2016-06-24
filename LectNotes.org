@@ -13,6 +13,49 @@ Learn computational problem solving
 ** What is computation
 There are basically two types of knowledge
  - Declerative - statements of fact eg. "A good health care plan improves the
-   quality of medical care while saving money"
- - Imperitive 
-stop at 9:30
+   quality of medical care while saving money" or "y is the sqrt of x iff y*y
+   =x" this does not tell us how to find sqrt x however it does tell us if
+   a guess is correct.
+ - Imperitive tells us how to acomplish something.  eg recipie for chocolate
+   cake.  eg approximaton of sqrt guess(new) = ( guess(old) + x/g(old))/2
+   this algorythm (a description of how to perform a computation) has 
+   converged when g*g is close enough to x.
+     - The algorythm contains a set of instructions (steps to be executed)
+     - flow of control, order to execute the steps, and a return to g(new)
+     - termination condition
+How do we make a machine follow the algorithim?  Build a machine to perform
+only this task, a fixed program computer, eg Turing's bombs.
+These are limited useful computer.
+The stored program computer, changed everything.  The instructions are no 
+different than the data. The machine became infinitely flexible.  Programs
+could produce programs.  This lead to the computer itself being considered 
+as a program, namely computer as interpreter.
+An interpreter can execute any legal set of instructions.
+Most computers have only a very small number of built in instructions.
+Turing showed that 6 primitive instructions were all that was needed.
+Progaming language provides a set of primitive instructions and set of 
+primitive flow of control and the combining mechanisms.
+
+The computer will always do exactly what it is told.
+
+A programing language has:
+  - Syntax which sequences of symbols and characters make a well formed string
+  - Static semantics which well formed strings have meaning eg Susan is 
+    building is syntactially well formed, the words are in the right order
+    but not very meaningful
+  - Semantics the meaning of the sting that passes both tests above.
+
+In natural language meaning is ambigous, a well formed statement in a
+programming laguage has exactly one meaning.
+
+What happens when we write a progam that doesn't do what we wanted it to do?
+- Crash in a properly designed computing system one crash will not affect 
+the rest of the program
+- It may not stop running.  If we don't know how long the program should run
+this will be hard to judge.  Infinite loop
+- may run to completion and give the wrong answer.
+In Ascending order of badness.
+Some languages give alot of help for these problems
+
+Lecture done
+* Lecture 2
