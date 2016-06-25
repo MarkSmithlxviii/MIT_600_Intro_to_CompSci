@@ -65,6 +65,8 @@ includes a specialized text editor
 syntax highlighting
 python shell
 debugger most programers rely on print statements for debugging
+ - when using print statements try and print value and type as type is not
+   necessarily clear from value alone
 ** objects
 everything in python is an object.
 even the code is an object
@@ -82,6 +84,46 @@ for every type there is a literal eg 3 is a literal of the integer between
 an expression is a sequence of operands(objects) and operators
 some of the operators are overloaded the meaning will be dependant on the type
 of operands eg 'a'+'b' + is overloaded and means concatinate
-24 min
+** programs
+A program is a sequence of commands that tell the computer to do something
+*** General
+Indentation has meaning python is unusual in this way.  Programmers use 
+indentation to make the program readable.
+Programs are meant to be read not just executed, the structure of the program
+should reflect the semantics of the program.
+*** Types of programs
+ - a straight line program runs from start to finish in a straight line
+ - most recipies have some sort of looping or test
+   eg cook the meat until it is 70 C.
+ - The most primitive test is a Conditional statement using if else elif
+   - can be nested one condition within another
+ - conditional statements introduce branchs into the program. but the program
+   still runs from start to finish there are multiple possible paths to a 
+   common end point.
+ - Looping constructs, Turing Complete  Introduces iteration statements can 
+   be executed more than once
+**** Time to execute a program
+A straight line program execution time depends on the number of statements.
+A branching program will depend on the length of the longest set of branches.
 
+Not much can be accomplished with these types of programs.  We can only type 
+so many lines of code in our lifetimes.  A way to evaluate the 'goodness' of 
+a program is that the execution time is proportional to the input rather than 
+to the number of lines of code in the program.
 
+Looping programs execution times are dependant on the size of the input data
+rather than the size of the program.
+
+** variables
+a name for an object (python)
+assignment statement binds a name to an object
+** comments
+use comments to explain your thinking
+what is the algorythm that has been used 
+not to explain the language
+answer the question what was I thinking when re-reading the script in 
+2 years from now.
+
+* useful commands
+raw_input (2.x) and input (3.x) requires input to continue running the script. 
+The input data is interperted as a string.
