@@ -59,3 +59,29 @@ Some languages give alot of help for these problems
 
 Lecture done
 * Lecture 2
+** IDE 
+integrated development environment
+includes a specialized text editor
+syntax highlighting
+python shell
+debugger most programers rely on print statements for debugging
+** objects
+everything in python is an object.
+even the code is an object
+each object has a type.  inbuilt function type that will return the object type
+two basic types of object scalar and non scalar
+scalars are non divisible / atom
+ - integer 
+ - float a computer approximation of the real numbers
+ - boolean TRUE/FALSE
+ - none is nonetype used as a temp placeholder
+ - does not have char (character) however strings can be of length 1
+for every type there is a literal eg 3 is a literal of the integer between 
+2 and 4, 'ab' is a string literal.
+** expressions
+an expression is a sequence of operands(objects) and operators
+some of the operators are overloaded the meaning will be dependant on the type
+of operands eg 'a'+'b' + is overloaded and means concatinate
+24 min
+
+
