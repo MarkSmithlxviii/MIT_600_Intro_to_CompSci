@@ -58,7 +58,26 @@ In Ascending order of badness.
 Some languages give alot of help for these problems
 
 Lecture done
+** Answers to the questions on the course web page
+*** What is the difference between declaritive and imperitive knowledge
+Declatitive deals with declarations - facts observations 'I like chocolate cake.  
+while imperitive is the knowledge of how.  How to bake the cake how to calculate sqrt(x)
+*** What is the advantage of a stored program computer
+A stored program computer is flexible.  It can be used to solve any problem that 
+a fixed program computer can solve however it is not limited to only one type
+of problem.
+*** What are syntax, static semantics and semantics of a language
+Same as natural language syntax is the grammer, what sequence of symbols
+constitutes a well formed string/sentence.  
+Static semantics defines which of the well formed strings have meaning.  
+Semantics are the meanings of the strings that pass the above tests.
+*** What kinds of errors can occur in a program
+The program can crash, terminate without completing and without returning an
+answer.
+The program can loop continously never returning a result.
+The program can finish and return an incorrect answer. 
 * Lecture 2
+made it to 25 minutes on second time through and fell asleep  
 ** IDE 
 integrated development environment
 includes a specialized text editor
@@ -77,7 +96,7 @@ scalars are non divisible / atom
  - float a computer approximation of the real numbers
  - boolean TRUE/FALSE
  - none is nonetype used as a temp placeholder
- - does not have char (character) however strings can be of length 1
+ - does not have char (character)object type however strings can be of length 1
 for every type there is a literal eg 3 is a literal of the integer between 
 2 and 4, 'ab' is a string literal.
 ** expressions
@@ -91,6 +110,7 @@ Indentation has meaning python is unusual in this way.  Programmers use
 indentation to make the program readable.
 Programs are meant to be read not just executed, the structure of the program
 should reflect the semantics of the program.
+Assignment binds the name to the object
 *** Types of programs
  - a straight line program runs from start to finish in a straight line
  - most recipies have some sort of looping or test
