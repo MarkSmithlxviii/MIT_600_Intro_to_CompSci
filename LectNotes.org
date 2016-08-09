@@ -77,7 +77,6 @@ answer.
 The program can loop continously never returning a result.
 The program can finish and return an incorrect answer. 
 * Lecture 2
-made it to 25 minutes on second time through and fell asleep  
 ** IDE 
 integrated development environment
 includes a specialized text editor
@@ -112,7 +111,7 @@ Programs are meant to be read not just executed, the structure of the program
 should reflect the semantics of the program.
 Assignment binds the name to the object
 *** Types of programs
- - a straight line program runs from start to finish in a straight line
+ - a straight line program runs from start to finish in a straight line (boring)
  - most recipies have some sort of looping or test
    eg cook the meat until it is 70 C.
  - The most primitive test is a Conditional statement using if else elif
@@ -125,25 +124,59 @@ Assignment binds the name to the object
 **** Time to execute a program
 A straight line program execution time depends on the number of statements.
 A branching program will depend on the length of the longest set of branches.
+A branching program is only slightly more complicated than a straight line
+program
 
 Not much can be accomplished with these types of programs.  We can only type 
 so many lines of code in our lifetimes.  A way to evaluate the 'goodness' of 
 a program is that the execution time is proportional to the input rather than 
 to the number of lines of code in the program.
 
-Looping programs execution times are dependant on the size of the input data
-rather than the size of the program.
+Looping programs (iteration) the program can reexecute statements depending on 
+the conditional statements execution times are dependant on the size of the 
+input data rather than the size of the program.
 
 ** variables
 a name for an object (python)
 assignment statement binds a name to an object
 ** comments
+Make the program easier to read
 use comments to explain your thinking
 what is the algorythm that has been used 
 not to explain the language
 answer the question what was I thinking when re-reading the script in 
 2 years from now.
-
+** Questions on the website.
+*** What is a type
+Int Float String, Type is a property of an object.
+*** what is an expresion
+it is a combination of operands and operators that can be interperted into a 
+value
+*** What is type conversion
+Changing an object from one type to another.
+*** what is a keyword
+A protected string that cannot be used as the name of an object eg float or if
+*** What is the difference between a straight line program and a branching Program
+a straight line program runs from start to finish along the same path every time
+while a branching program will change paths depending on conditional statements
+*** What is a conditional
+if and else,  it is a test to see if a block of code should be run. 
+* recitation 1 (after lecture 2)
+stopped at 30 min
+** Computation
+Take a real problem and break it down into small managable pieces
+actual code is non diciferable 10110101001101001.
+a programing language can be non readable or it can be easily readable
+syntax and static semantics are realatively easy for a compiler/interperater 
+to check.
+semantics not so much eg 1/0 is leagal and conforms to static semantics however
+it is wrong
+Python is a general purpose language 
+interperted
+A program is a sequence of expresions - operands and operators.
+everything in Python is an object all objects have types, int, float, str etc.
+Python determines the type at assignment depending on the input types.  
 * useful commands
-raw_input (2.x) and input (3.x) requires input to continue running the script. 
+raw_input (2.x) all input is of type str even for example 3.2
+bothraw_input and input (3.x) requires input to continue running the script. 
 The input data is interperted as a string.
