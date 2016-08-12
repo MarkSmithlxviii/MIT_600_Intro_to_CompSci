@@ -11,12 +11,18 @@ loan_amount=input("Enter your Credit Card balance in dollars and cents - ")
 minPaymentRate=input("Enter the Minimum Payment rate - ")
 interestRate=input('Enter the interest rate charged by you card provider - ')
 balanceOutstanding=loan_amount 
+monthlyInterestCharges = 0
+minMonthlyPayment = 0
+principlePaid=0
 
-for months in {1:12}
+for month in months[1:12]
     monthlyInterestCharges = interestRate/12* balanceOutstanding
-    minMonthlyPayment = balanceOutstanding - monthlyInterestCharges
+    minMonthlyPayment = balanceOutstanding * minPaymentRate
     if monthlyInterestCharges > minMonthlyPayment:
         print('Interest charges exceed the minimum payment, the debt cannot be repaid')
+    balanceOutstanding = balanceOutstanding-minMonthlyPayment+monthlyInterestCharges
+    principlePaid = minMonthlyPayment - monthlyInterestCharges
+    
     
 
 
