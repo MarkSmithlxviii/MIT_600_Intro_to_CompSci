@@ -162,7 +162,7 @@ while a branching program will change paths depending on conditional statements
 *** What is a conditional
 if and else,  it is a test to see if a block of code should be run. 
 * recitation 1 (after lecture 2)
-stopped at 30 min
+
 ** Computation
 Take a real problem and break it down into small managable pieces
 actual code is non diciferable 10110101001101001.
