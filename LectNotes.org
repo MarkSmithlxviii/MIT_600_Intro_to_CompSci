@@ -175,7 +175,9 @@ Python is a general purpose language
 interperted
 A program is a sequence of expresions - operands and operators.
 everything in Python is an object all objects have types, int, float, str etc.
-Python determines the type at assignment depending on the input types.  
+Python determines the type at assignment depending on the input types. 
+While is used if we dont know how long the loop needs to run
+For is used if we know exacly ow long to run the loop.
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
