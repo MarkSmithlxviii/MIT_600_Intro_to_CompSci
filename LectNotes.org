@@ -178,6 +178,46 @@ everything in Python is an object all objects have types, int, float, str etc.
 Python determines the type at assignment depending on the input types. 
 While is used if we dont know how long the loop needs to run
 For is used if we know exacly ow long to run the loop.
+
+* Lecture 3: Problem Solving
+** Decramenting functions.
+The cube root program will terminate for all integer values of x.  This is 
+because a decramenting function has been used (as a notion in the authors
+head).  every time we write a loop think of decrementing functions.  
+
+python
+
+#Find the cube root of a perfect cube
+x = int(raw_input('Enter an integer: '))
+ans = 0
+while ans*ans*ans < abs(x):
+    ans = ans + 1
+    #print 'current guess =', ans
+if ans*ans*ans != abs(x):
+    print x, 'is not a perfect cube'
+else:
+    if x < 0:
+        ans = -ans
+    print 'Cube root of ' + str(x) + ' is ' + str(ans)
+
+*** Properties of a decrimenting function
+it is only in the mind of the programmer but it is used to think 
+about the program.
+ - map a set of program variables to an integer
+ - when the loop is entered it takes a non negative value
+ - When its value gets to be less than or equal to zero the loop terminates
+ - decreased at each step of the loop
+the decrimenting function in the cube root program is
+abs(x)-ans^3 this satisfies the conditions and will terminate.
+
+This is an example of guess and check. called exhaustive enumeration. 
+Enumerating all possible answers.  if we get to the end condition and 
+have not found a perfect cube root then we know that the number is not a 
+perfect cube.  This is a brute force process.  This is a completely acceptable 
+way to solve problems as computers are sooooo fast.  
+Stopped at 15 minutes
+
+
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
