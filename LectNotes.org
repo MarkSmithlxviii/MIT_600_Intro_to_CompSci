@@ -76,7 +76,7 @@ The program can crash, terminate without completing and without returning an
 answer.
 The program can loop continously never returning a result.
 The program can finish and return an incorrect answer. 
-* Lecture 2
+* Lecture 2: Core Elements of a Program
 ** IDE 
 integrated development environment
 includes a specialized text editor
@@ -211,17 +211,29 @@ the decrimenting function in the cube root program is
 abs(x)-ans^3 this satisfies the conditions and will terminate.
 
 This is an example of guess and check. called exhaustive enumeration. 
-Enumerating all possible answers.  if we get to the end condition and 
-have not found a perfect cube root then we know that the number is not a 
+Enumerating all possible answers brute force.  if we get to the end condition 
+and have not found a perfect cube root then we know that the number is not a 
 perfect cube.  This is a brute force process.  This is a completely acceptable 
-way to solve problems as computers are sooooo fast.  
-Stopped at 15 minutes
+way to solve problems as computers are sooooo fast. But will not always be
+applicable
+There is nothing that can be done with a for loop that cant be done with a 
+while loop but the for loop makes life a lot easier.
+
+** Approximation 20:00
+What does it meat to find the Square root?  eg we cannot find two numbers 
+that will multipy together to make 2, for example.
+Approximtion is finding an answer that is good enough.  requires answering
+ the question how good does the estimate have to be?  eg I would like a value
+sqrt (2) that is within epsilon of the real answer or find y such that 
+y*y = 2 +- Epsilon. If an exact answer does exist this will not find it.
+stopped at 29:00
 
 
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
 The input data is interperted as a string.
-This is changed to commit a new file again just for a new commit.
-What is this the 6th time making an insignificant change?
-This is one time more than the last time.
+range(x,y) = ( x, x+1, x+2, ... y-1) a sequence of length y starting at x
+break exits the loop without executing all the values in the range, if the
+loop is nested only jumps to the next nested loop.
+ 
