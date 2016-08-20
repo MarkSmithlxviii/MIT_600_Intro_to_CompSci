@@ -233,7 +233,9 @@ stopped at 29:00
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
 The input data is interperted as a string.
-range(x,y) = ( x, x+1, x+2, ... y-1) a sequence of length y starting at x
+range(x,y) = ( x, x+1, x+2, ... y-1) a sequence ending at y-1 starting at x
 break exits the loop without executing all the values in the range, if the
 loop is nested only jumps to the next nested loop.
- 
+Using + (concat) in a print statememt allows for precice control of the 
+space character.  
+for will iterate accross the characters in a string.
