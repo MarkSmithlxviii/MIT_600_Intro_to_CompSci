@@ -6,4 +6,4 @@
 
 dob=input("Enter you Date of birth in the form dd-MMMM-yyyy - " )
 last_name=input("Enter you Last Name - ")
-print("Your last name is", last_name, ".  Your Date of birth is", dob, ".")
+print("Your last name is " + last_name + ".  Your Date of birth is " + dob + ".")
