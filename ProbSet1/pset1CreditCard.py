@@ -21,7 +21,8 @@ for month in months:
     monIntChgs = intRate/12* balOut
     minMonPay = balOut * minPayRate
     if monIntChgs > minMonPay:
-        print('Interest charges exceed the minimum payment, the debt cannot be repaid')
+        print('Interest charges exceed the minimum payment, ')
+        print('the debt cannot be repaid')
     balOut = balOut-minMonPay+monIntChgs
     princePd = minMonPay - monIntChgs
     
