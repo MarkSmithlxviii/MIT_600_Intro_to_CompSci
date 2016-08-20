@@ -8,22 +8,23 @@
 
 
 loan_amount=input("Enter your Credit Card balance in dollars and cents - ")
-minPaymentRate=input("Enter the Minimum Payment rate - ")
-interestRate=input('Enter the interest rate charged by you card provider - ')
+minPayRate=input("Enter the Minimum Payment rate - ")
+intRate=input('Enter the interest rate charged by you card provider - ')
 balOut=loan_amount      # This will be the outstandig balance at the end of the
                         # Calculation Period
 monIntChgs = 0          # The dollar value of the monthly interest
 minMonPay = 0           # The dolar value of the minimum montly payment
-prinPd=0                # The dollar value of principle paid monthly
-months = [1:12]
+princePd=0                # The dollar value of principle paid monthly
+months = range(1,13)
 
-for month in months
-    monthlyInterestCharges = interestRate/12* balanceOutstanding
-    minMonthlyPayment = balanceOutstanding * minPaymentRate
-    if monthlyInterestCharges > minMonthlyPayment:
-        print('Interest charges exceed the minimum payment, the debt cannot be repaid')
-    balanceOutstanding = balanceOutstanding-minMonthlyPayment+monthlyInterestCharges
-    principlePaid = minMonthlyPayment - monthlyInterestCharges
+for month in months:
+    monIntChgs = intRate/12* balOut
+    minMonPay = balOut * minPayRate
+    if monIntChgs > minMonPay:
+        print('Interest charges exceed the minimum payment, ')
+        print('the debt cannot be repaid')
+    balOut = balOut-minMonPay+monIntChgs
+    princePd = minMonPay - monIntChgs
     
     
 
