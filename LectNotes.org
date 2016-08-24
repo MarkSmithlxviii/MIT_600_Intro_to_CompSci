@@ -213,9 +213,10 @@ abs(x)-ans^3 this satisfies the conditions and will terminate.
 This is an example of guess and check. called exhaustive enumeration. 
 Enumerating all possible answers brute force.  if we get to the end condition 
 and have not found a perfect cube root then we know that the number is not a 
-perfect cube.  This is a brute force process.  This is a completely acceptable 
+perfect cube.  This is a brute force process.  This is an acceptable 
 way to solve problems as computers are sooooo fast. But will not always be
-applicable
+applicable especially if the decrimenting function takes a looooong time to 
+converge.
 There is nothing that can be done with a for loop that cant be done with a 
 while loop but the for loop makes life a lot easier.
 
@@ -225,9 +226,25 @@ that will multipy together to make 2, for example.
 Approximtion is finding an answer that is good enough.  requires answering
  the question how good does the estimate have to be?  eg I would like a value
 sqrt (2) that is within epsilon of the real answer or find y such that 
-y*y = 2 +- Epsilon. If an exact answer does exist this will not find it.
-stopped at 29:00
+y*y = 2 +- Epsilon. If an exact answer does exist this will likely not find it.
 
+32:00  Approximation is dependent on 
+- The incriment of each step in the loop
+- Epsilon
+- The distance between the start and the answer
+
+To make it faster need to find a better algorythim
+** Bisection Search 32:30
+two algorythm types/methods
+1) Cut the search space in half each iteration Brute force only trims off the increment with each pass of the loop.  This is still guess and check.
+2) did not get the second method in lecture 3
+it is easy to write a program that is fast but yields the wrong answer
+the trick is to write a program that is both fast and yields the correct answer
+bisection requires that answer lies in the search space.  the square root 
+bisection method in the lecture code will not work for some values of x
+as suspected it does not wokr for values less than 0.
+
+Lecture finished
 
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2

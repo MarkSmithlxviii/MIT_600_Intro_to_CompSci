@@ -1,0 +1,38 @@
+# Author: Mark Smith
+
+* Introduction
+Notes taken while listening to the Safari (O'Reilly) Introduction to Python
+Video Series.  The notes start part way through the series.
+
+* Dictionaries
+Key -  Value storage.  Order is not important, nor is it preserved.
+
+created with curley braces
+icecream = {'Alice':'chocolate', 'Bob':'strawberry'}
+dict = {'key': 'value'}
+
+adding to the dict is done by
+icecream['Eve'] = 'rum rasin'
+
+Main operation is looking up values based on their key.
+icecream['Alice'] will return the value associated with the key 'Alice' which 
+in this case is 'chocolate'
+
+Containment can be checked prior to calling the key
+
+A Key is unique writing a value to a key that alredy exists overwrites the 
+original value.  By contrast values are not unique.
+
+* Modules
+Python has limited built in functionality out of the box.  The functionality 
+has been expanded with modules.
+
+Modules are accessed with; import
+import random 
+will make the random module available.
+
+* Command line nagigation
+dir lists the contents of directory on windows
+cd change directory
+
+
