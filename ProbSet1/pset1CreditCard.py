@@ -6,25 +6,41 @@
 ## Input from the user for starting balance, interest rate, and minimum
 ## required payment
 
-
-loan_amount=input("Enter your Credit Card balance in dollars and cents - ")
-minPayRate=input("Enter the Minimum Payment rate - ")
-intRate=input('Enter the interest rate charged by you card provider - ')
-balOudstndg=loan_amount     # This will be the outstandig balance at the end of the
-                            # Calculation Period
-monIntChgs = 0              # The dollar value of the monthly interest
-minMonPay = 0               # The dolar value of the minimum montly payment
-princePd=0                  # The dollar value of principle paid monthly
+print("Enter your Credit Card balance in dollars and cents - ")
+loan_amount = float(input())
+print("Most institutions require a minimum payment that is a portion of")
+print("the balance that is still owed.  Typical minimum payments are 2% of") 
+print("outstanding Balance.")
+print("Enter the Minimum Payment rate - Example for 2% enter 0.02")
+minPayRate = float(input())
+print('Enter the interest rate charged by you card provider as a decimal.')
+print('Example for 18% enter 0.18')
+intRate = float(input())
+balOutStdg=loan_amount  # This will be the outstandig balance at the end of the
+#                       # Calculation Period
+monIntChgs = 0          # The dollar value of the monthly interest
+minMonPay = 0           # The dolar value of the minimum monthly payment
+princePd=0              # The dollar value of principle paid monthly
 months = range(1,13)
 
 for month in months:
-    monIntChgs = intRate / 12 * balOudstndg
-    minMonPay = balOudstndg * minPayRate
+    monIntChgs = intRate / 12 * balOutStdg
+    minMonPay = balOutStdg * minPayRate
     if monIntChgs > minMonPay:
         print('Interest charges exceed the minimum payment, ')
         print('the debt cannot be repaid')
-    balOudstndg = balOudstndg-minMonPay+monIntChgs
     princePd = minMonPay - monIntChgs
+    balOutStdg = balOutStdg - princePd
+    pmon = str(month)                  # Printable MONth
+    pint = str(round(monIntChgs, 2))   # Printable INTerest
+    ppay = str(round(minMonPay, 2))    # Printable monthly PAYment
+    pbal = str(round(balOutStdg, 2))   # Printable outstanding BALance
+    print('The interest charges for month ' + pmon + ' are $'+ pint)
+    print('The minimum payment for month ' + pmon + ' is $' + ppay)
+    print('The outstanding balance at the end of month ' + pmon + ' is $' + pbal)
+    
+    
+    
 
     
     
