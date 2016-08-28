@@ -16,21 +16,23 @@ months = (range(1, 13))
 finalBal = outBal
 intMon = 0     # The dollar value of the monthly interest
 monPay = 110     # The monthly payment that will be iterated at $10 per iteration
+month = 0
 
-while finalBal > 0:
+while finalBal > 0 and month <= 12 :
     finalBal = outBal
     monPay += 10
-    for month in months:
-        print (month, finalBal)
+    month = 0
+    while finalBal > 0:
+        # print (month, finalBal)
+        month +=1
         intMon = finalBal * intRate / 12
         finalBal = finalBal - monPay + intMon
-        if finalBal < 0: 
-            ppay = str(round(monPay, 2)) # Printable monthly PAYment
-            pmon = str(month)
-            print('')
-            print('Results')
-            print('Monthly payment to pay off debt in 1 year: $' + ppay)
-            print('Number of months needed: ' + pmon)    
-        
+ppay = str(round(monPay, 2)) # Printable monthly PAYment
+pmon = str(month)
+print('')
+print('Results')
+print('Monthly payment to pay off debt in 1 year: $' + ppay)
+print('Number of months needed: ' + pmon)    
+
         
         

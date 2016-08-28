@@ -37,8 +37,8 @@ for month in months:
         print('the debt cannot be repaid if only the minimum payment is made.')
     princePd = minMonPay - monIntChgs
     balOutStdg = balOutStdg - princePd
-    totalPaid = totalPaid + minMonPay
-    intTotalPaid = intTotalPaid + monIntChgs
+    totalPaid += minMonPay
+    intTotalPaid += monIntChgs
     pmon = str(month)                  # Printable MONth
     pint = str(round(monIntChgs, 2))   # Printable INTerest
     ppay = str(round(minMonPay, 2))    # Printable monthly PAYment
