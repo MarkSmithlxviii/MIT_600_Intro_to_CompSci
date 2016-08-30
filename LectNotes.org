@@ -242,7 +242,7 @@ it is easy to write a program that is fast but yields the wrong answer
 the trick is to write a program that is both fast and yields the correct answer
 bisection requires that answer lies in the search space.  the square root 
 bisection method in the lecture code will not work for some values of x
-as suspected it does not wokr for values less than 0.
+as suspected it does not wokr for values between -1 and 1.
 
 Lecture finished
 
