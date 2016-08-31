@@ -24,6 +24,8 @@ while finalBal > 0:
         # print (month, finalBal)
         intMon = finalBal * intRate / 12
         finalBal = finalBal - monPay + intMon
+        if finalBal < 0:
+            break
 ppay = str(round(monPay, 2)) # Printable monthly PAYment
 pmon = str(month)
 pbal = str(round(finalBal,2))
