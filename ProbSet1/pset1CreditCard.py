@@ -1,8 +1,8 @@
 ## Mit 6.00 Introduction to Computer Science Spring 2011
 ## Problem Set 1.  Introduction to Flow Control
 ## August 10 2016
-## Write a probram to calculate interest and minimum Monthly payments
-## for a credit Card 
+## Write a probram to calculate interest, minimum Monthly payments
+## and the final balance at the end of 12 months for a credit Card 
 ## Input from the user for starting balance, interest rate, and minimum
 ## required payment
 
@@ -39,20 +39,14 @@ for month in months:
     balOutStdg = balOutStdg - princePd
     totalPaid += minMonPay
     intTotalPaid += monIntChgs
-    pmon = str(month)                  # Printable MONth
-    pint = str(round(monIntChgs, 2))   # Printable INTerest
-    ppay = str(round(minMonPay, 2))    # Printable monthly PAYment
-    pbal = str(round(balOutStdg, 2))   # Printable outstanding BALance
-    pprin= str(round(princePd, 2))     # Printable PRINciple paid
     print('')
-    print('Month: ' + pmon)
+    print('Month: {0}' .format(month))
     print('')
-    print('The interest charges for month ' + pmon + ' are $'+ pint)
-    print('The minimum payment for month ' + pmon + ' is $' + ppay)
-    print('The principle paid for month ' + pmon + ' is $' + pprin)
-    print('The outstanding balance at the end of month ' + pmon + ' is $' + pbal)
-ptot = str(round(totalPaid,2))
+    print('The interest charges for month {0} are ${1:.2f}'.format(month, monIntChgs) )
+    print('The minimum payment for month {0} is ${1:.2f}'.format(month, minMonPay))
+    print('The principle paid for month {0} is ${1:.2f}'.format(month, princePd))
+    print('The outstanding balance at the end of month {0} is ${1:.2f}'.format(month, balOutStdg))
 print('')
 print('')
-print('The total amount paid over 12 months is:            $' + ptot)
-print('The outstanding balance at the end of 12 months is: $' + pbal)
+print('The total amount paid over 12 months is:            ${0:.2f}'.format(totalPaid))
+print('The outstanding balance at the end of 12 months is: ${0:.2f}'.format(balOutStdg))
