@@ -23,5 +23,7 @@ def compute_deriv(poly):
     deriv = ()
     for coeff in poly:
         newcoeff = expon * coeff
-        deriv = deriv[:(len(poly))]+ (newcoeff,)
-        expon += 1   
+        deriv = deriv + (newcoeff,)
+        expon += 1
+    #print (deriv)
+    return deriv    

@@ -22,7 +22,8 @@ def evaluate_poly(poly, x):
     expn = 0
     f_of_x = 0
     for coeff in poly:
-        print(expn, coeff)        
+        #print(expn, coeff)        
         f_of_x = f_of_x + coeff*(x**expn)
-        expn += 1       
-    print('f(x)={0:.2f}'.format(f_of_x))
+        expn += 1
+    return f_of_x
+    #print('f(x)={0:.2f}'.format(f_of_x))

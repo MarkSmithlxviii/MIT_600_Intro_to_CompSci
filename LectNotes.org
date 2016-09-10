@@ -242,9 +242,97 @@ it is easy to write a program that is fast but yields the wrong answer
 the trick is to write a program that is both fast and yields the correct answer
 bisection requires that answer lies in the search space.  the square root 
 bisection method in the lecture code will not work for some values of x
-as suspected it does not wokr for values between -1 and 1.
+as suspected it does not work for values between -1 and 1.  The answer does not lie in the search space.
+To fix the algorythm need to make the initial high = max (x, 1.0)
+* Lecture 4 Machine interpretation of code
+** Debugging code
+The most important thing to learn in 6.00 intro to computer science is; How to debug programs.
+The easy part is writting out the code for the first time, the hard part is getting it to work.
+When debugging don't be lazy.  It is worth the extra time to clearly indicate what is being printed rather than a bunch of unlabled variables.
+Two tools that are good for debugging would be print this and print that to allow observation of the variables.  Assert will stop the program if it evaluates to false, this can be used to stop after a certain number of iterations.
 
-Lecture finished
+** Functions
+The square root code from last lecture works, however, it is not super efficient.  Every time we would like to solve a new square root we need to modify the code to change the value of X.
+If we wanted to incorporate the code into a larger piece of code we would end up with multiple repetitions of the same code.  not super awesome.
+Code is not an essay that we sweat to stretch to a given length.  In general having more code is a bad thing.  Typically the more code there is the harder it is to make it work.
+
+*** What to we hope to accomplish by adding functions to a programming language.
+Incorporate a mechanism to provide two things:
+
+**** Decomposition
+- Creates structure
+- Allows us to break up the program into Modules
+  - Self contained and reusable code.
+
+
+**** Abstraction
+- Suppresses details
+- allows us to use the code as a black box
+  - we can use other peoples code
+  - only need to know what it does not how it does it
+  - Ignorance is bliss
+  - we can not necessarily see the code and indeed in many cases do not necessarily want to see the code and how it functions.
+  - EG 'cat' we don't know how python achieved the result we just wanted it to achieve it.
+
+*** Using Functions
+Pick a name with meaning, this will make function calls easier to read if the name is intuitive.  Functions allow us to extend the language by adding primitives that can be used in a similar manner to the built in primitives.
+ 
+def short for define.  followed by a name with (paramaters). and then function body.  In the body we can write any code we want as well as a special function only keyword return.  If return is not included in the function is will return the special value None. Executing def does nothing other than put some names in the environment
+Functions can be nested
+
+Note:  There is no relation between the formal (variable(s) used in the function) and variables used to call the function.  In other words, there is no relationship between the variable used to call the function and the variable used in the function.
+
+def f(x):          # this x is un-related to the x below that was used to call the function.
+   x = x + 1
+   print 'x =', x
+   return x
+
+x = 3            # assign the value of '3' t a varible called 'x'.  this value will be passed to the function in the next line.
+z = f(x)         # Assigning the value returned by the function to a variable called 'z'
+print 'z =', z   # Print the value of the variable containing the value returned by the function.
+print 'x =', x   # Print '3' the value passed to the function, this'x' has noting to do with the variable, of the same name, used by the function.
+
+*** What happens when we call a function?
+At the call:
+1. The FORMAL parameter (the parameter used in the function), 'x' in the code above, is bound to the value of the ACTUAL, 'x' in the code above.
+   1. Upon entry into the function a new SCOPE is created.
+   2. A scope is a mapping of names to objects.
+   3. Each function has its own scope and maps its own variables to values relavant to the function.
+   4. also called a stack frame
+   5. in the code below when the script is sent to the interpreter we begin with
+      1. Main - the main scope
+      2. Main calls f and the interpreter creates the scope for 'f1' and maps x to g()
+      3. f calls g and the interpreter then creates the g scope and maps x to abc within that scope.
+      4. when g completes it 'pops' the stack this gets rid of the g scope, when f completes similarly the stack is popped and the f scope is deleted. leaving only the mian scope
+      5. The stack is first in last out
+      6. The stack can be viewed with the stack viewer.  But only if the object of interest has not been popped out of the stack.
+      7. The various occurances of x can be thought of as g.x, f.x and main.x indicating the scopes in which they are maped to values.
+
+def f1(x):
+   def g():
+       x = 'abc'
+   x = x + 1
+   print 'x =', x
+   g()
+   assert False
+   return x
+
+** Answers to the questions on the web page
+What is decomposition?  Decomposition allows us to structure a program by using modules, self contained re-useable pieces of code.
+What is abstraction?  Abstraction is using the code as a black box, we are interested in the results, the returned values and not concerned with the how of the code.
+What is the difference betwee formal and actual parameters? The formal parameter is used inside of a proceedure, the actual is the paramter that is used to asign the value to the formal. 
+
+* Recitation 2 Loops, Tuples, Strings and Functions
+A for loop requires something that is innumerable.  
+Range will count backwards if given a negative step.  Range will truncate floats. 
+
+** Tuples
+Non-scalar data type that can hold multiple objects.  immutable.  literal syntax for a tuple is comma separated values contained inside of parenthesis.  The items in a tuple are indexed.  Accessing the items of a tuple is done with square brackets tupleName[index], indexing starts at 0.  negative indicies start at the non 0 end of the tuple and count towards the 0 end.  Tuples can be sliced tupleName[start:finish]  start is inclusive finish is exclusive. Start is optional, if it is left out then impicit start is index 0.
+
+Slicing [:] returns the whole tuple, [-1] returns the last item of the tuple, and [:-1] returns all but the last item.  In summary blank includes the last item -1 is exclusive of the last item.
+
+** video stopped at 42:00
+
 
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
@@ -256,3 +344,8 @@ loop is nested only jumps to the next nested loop.
 Using + (concat) in a print statememt allows for precice control of the 
 space character.  
 for will iterate accross the characters in a string.
+
+Assert evaluates an expression to TRUE of FALSE.  
+- if TRUE nothing happens and the program continues
+- If FALSE the program halts. Dead.
+Assert is useful for stopping  a program if the wrong input is provided by the user.
