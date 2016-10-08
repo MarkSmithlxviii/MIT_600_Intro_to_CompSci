@@ -245,6 +245,7 @@ bisection method in the lecture code will not work for some values of x
 as suspected it does not work for values between -1 and 1.  The answer does not lie in the search space.
 To fix the algorythm need to make the initial high = max (x, 1.0)
 * Lecture 4 Machine interpretation of code
+Lecture completed
 ** Debugging code
 The most important thing to learn in 6.00 intro to computer science is; How to debug programs.
 The easy part is writting out the code for the first time, the hard part is getting it to work.
