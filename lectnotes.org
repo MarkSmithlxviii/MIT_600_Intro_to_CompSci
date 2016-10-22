@@ -245,6 +245,7 @@ bisection method in the lecture code will not work for some values of x
 as suspected it does not work for values between -1 and 1.  The answer does not lie in the search space.
 To fix the algorythm need to make the initial high = max (x, 1.0)
 * Lecture 4 Machine interpretation of code
+Lecture completed
 ** Debugging code
 The most important thing to learn in 6.00 intro to computer science is; How to debug programs.
 The easy part is writting out the code for the first time, the hard part is getting it to work.
@@ -331,7 +332,33 @@ Non-scalar data type that can hold multiple objects.  immutable.  literal syntax
 
 Slicing [:] returns the whole tuple, [-1] returns the last item of the tuple, and [:-1] returns all but the last item.  In summary blank includes the last item -1 is exclusive of the last item.
 
-** video stopped at 42:00
+** Functions
+A 'bit' of code that is:
+ - Named, so that it can be refered to, 'called'
+   - the name should be meaningful
+ - Takes input
+ - Performs some task (function) on the input, and
+ - Returns a result.
+ - in python
+   - functions are broken out with the keyword def
+   - the function name follows def and
+   - the input parameters (in, brackets) that will be passed to the function follow the name
+   - the def line is completed with a :
+   - The next lines are set out with tripple double quotes (""")and are the doc string
+     - The doc string contains the purpose of the function, a definition of the inputs and outputs and the type of inputs and outputs.
+   - The body of the function follows the doc string
+   - a return statement is required to send the output back to who/what called the function.  Python will implcitly return 'NONE' if there is no return statement.
+ - Python variables have scope.
+   - for functions this means that:
+     - Variables defined in the function are not available for use outside the function
+       - Global variables can be used in the function however they can be overwritten within the function as well.
+       - Using globals can lead to unexpected errors or behavior.
+       - If the global is to be manipulated then the global keyword is required to map the global to a local.
+       - If the global is called in a print statement for example, the global keyword is not required and possibly under other conditions as well.
+     - Varibles passed to the function are not altered foo(bar) will modify the local variable and leave the global unchanged bar = foo(bar) will of course result in a modified bar.
+ - Return is not print and print is not return 
+
+** video stopped at 55:00
 
 
 * useful commands
