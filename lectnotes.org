@@ -360,7 +360,28 @@ A 'bit' of code that is:
 
 ** video stopped at 55:00
 
-
+* Lecture 5 Objects in Python.
+** Collecion of items in Python
+Python will collect 'items' in three data structures
+- tuples
+  - immutable
+  - (items, 'in', a , tuple)
+- lists
+  - mutable
+  - [items, in, a, list],
+  - can have a list of list(s), the internal lists maintian all assignment ie. list.append(foo) if foo is mutated then or reassigned then the changes will be reflected in the foo contained within List as well.
+  - Individual elements can be changed this is not assignment.  list [1] = 'foo' changes the value of list[1] it does not bind/assign 'foo' to list[1].  this is not conventional assignement list[1] is not a name with a bound value associated with it is list[1] will refer to the second element in flat and modifying the list can change the value of list[1] with out specifically assigning a new value.  Sort, for example may change the value of list[1].
+    - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
+  - 
+- Dictionaries
+Tuples and lists are ordered sequences (dicts are now 3.5?)
+ 
+a slice is a range of values a subset
+lists are more complicated than tuples
+Append is a list method list.append(foo) is similar to a function and can safely be consitered as an alternative syntax to the function append(list, foo).  Append mutates the list it is not assigning.  
+Methods have mutation as a side effect. Functions take input and preform computations and retun a value.  The original input remains unchanged.  If the retunred value is to be used it must be assigned to a variable for further computation.  A method is invoked precicely for the side effect, the modification of the object.
+Assigning a concatinated group of tuples
+** Lecture Stopped at 27:30
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
