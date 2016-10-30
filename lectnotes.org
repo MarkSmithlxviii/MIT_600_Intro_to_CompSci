@@ -371,6 +371,16 @@ Python will collect 'items' in three data structures
   - [items, in, a, list],
   - can have a list of list(s), the internal lists maintian all assignment ie. list.append(foo) if foo is mutated then or reassigned then the changes will be reflected in the foo contained within List as well.
   - Individual elements can be changed this is not assignment.  list [1] = 'foo' changes the value of list[1] it does not bind/assign 'foo' to list[1].  this is not conventional assignement list[1] is not a name with a bound value associated with it is list[1] will refer to the second element in flat and modifying the list can change the value of list[1] with out specifically assigning a new value.  Sort, for example may change the value of list[1].
+    - for example:
+#+BEGIN_SRC Python
+list1 = ['items', 'in', 'list', 1]
+list2 = [list1, 'other', 'items', 2]
+# some code that deals exclusively with list1
+for items in list1:
+    if items == 'in'
+        list1.sort()
+print(list2) # may not be what is expected and certainly has changed from the original assignment statement
+#+End_SRC
     - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
   - 
 - Dictionaries
