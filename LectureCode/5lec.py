@@ -39,22 +39,33 @@
 L1 = [2]
 L2 = [L1, L1]
 print ('L2 =', L2)
+## output >>> L2 = [[2],[2]]
 L1[0] = 3
 print ('L2 =', L2)
+## output >>> L2 = [[3],[3]]
 L2[0] = ('a')
 print ('L2 =', L2)
+## output >>> L2 = ['a', [3]]
 
-##L1 = [2]
-##print ('L2 =', L2)
-##L2 = L1
-##L2[0] = 'a'
-##print ('L1 =', L1)
-##print ('L2 =', L2)
-##
-##L1 = [2]
-##L2 = L1[:]
-##L2[0] = 'a'
-##print ('L1 =', L1)
+L1 = [2]
+print ('L2 =', L2)
+## output >>> L2 = ['a', [3]]
+L2 = L1
+## L2 and L1 are names pointing to the same object
+L2[0] = 'a'
+## Mutating the object 
+print ('L1 =', L1)
+## output >>> L1 = ['a']
+## L1 is pointing to the now mutated object
+print ('L2 =', L2)
+## output >>> L2 = ['a']
+## L2 points to the same mutated object.
+
+L1 = [2]
+L2 = L1[:]
+L2[0] = 'a'
+print ('L1 =', L1)
+## output >>> L1 = [2]
 
 ##def copyList(LSource, LDest):
 ##    for e in LSource:

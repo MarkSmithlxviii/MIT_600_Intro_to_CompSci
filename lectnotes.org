@@ -380,9 +380,41 @@ for items in list1:
     if items == 'in'
         list1.sort()
 print(list2) # may not be what is expected and certainly has changed from the original assignment statement
+
+## code from letcure handout with ## comments by me
+L1 = [2]
+L2 = [L1, L1]
+print ('L2 =', L2)
+## output >>> L2 = [[2],[2]]
+L1[0] = 3
+print ('L2 =', L2)
+## output >>> L2 = [[3],[3]]
+L2[0] = ('a')
+print ('L2 =', L2)
+## output >>> L2 = ['a', [3]]
+
+L1 = [2]
+print ('L2 =', L2)
+## output >>> L2 = ['a', [3]]
+L2 = L1
+## L2 and L1 are names pointing to the same object
+L2[0] = 'a'
+## Mutating the object 
+print ('L1 =', L1)
+## output >>> L1 = ['a']
+## L1 is pointing to the now mutated object
+print ('L2 =', L2)
+## output >>> L2 = ['a']
+## L2 points to the same mutated object.
+
+L1 = [2]
+L2 = L1[:]
+L2[0] = 'a'
+print ('L1 =', L1)
+## output >>> L1 = [2]
 #+End_SRC
-    - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
-  - 
+- binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
+- 
 - Dictionaries
 Tuples and lists are ordered sequences (dicts are now 3.5?)
  
