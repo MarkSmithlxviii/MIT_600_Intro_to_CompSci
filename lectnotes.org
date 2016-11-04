@@ -373,49 +373,64 @@ Python will collect 'items' in three data structures
   - Individual elements can be changed this is not assignment.  list [1] = 'foo' changes the value of list[1] it does not bind/assign 'foo' to list[1].  this is not conventional assignement list[1] is not a name with a bound value associated with it is list[1] will refer to the second element in flat and modifying the list can change the value of list[1] with out specifically assigning a new value.  Sort, for example may change the value of list[1].
     - for example:
 #+BEGIN_SRC Python
-list1 = ['items', 'in', 'list', 1]
-list2 = [list1, 'other', 'items', 2]
-# some code that deals exclusively with list1
-for items in list1:
-    if items == 'in'
-        list1.sort()
-print(list2) # may not be what is expected and certainly has changed from the original assignment statement
-
 ## code from letcure handout with ## comments by me
 L1 = [2]
 L2 = [L1, L1]
 print ('L2 =', L2)
 ## output >>> L2 = [[2],[2]]
+## the first and second elements in L2 point to the same object as L1 
 L1[0] = 3
+## the object 
+## - list, length 1, contents int 2 - has been mutated to 
+## - list, length 1, contents int 3 -.  This is the object 
+## that both L1 and the 0th and 1st elements of L2 pointed to. 
 print ('L2 =', L2)
 ## output >>> L2 = [[3],[3]]
+## L2 has changed although it has not been expressly changed
 L2[0] = ('a')
 print ('L2 =', L2)
 ## output >>> L2 = ['a', [3]]
 
+
+
 L1 = [2]
+## changes the binding of L1.  
+## This name now points to the new object, a list length 1 with 
+## the contents of int 2. does not affect the object
+## - list, length 1, contents int 3 -
 print ('L2 =', L2)
 ## output >>> L2 = ['a', [3]]
+## the first (remember 0th 1st) element in L2 still points to the object
+## - list, length 1, contents int 3 -
 L2 = L1
-## L2 and L1 are names pointing to the same object
+## L2 and L1 are different names pointing to the same object
 L2[0] = 'a'
-## Mutating the object 
+## Mutating the object to which both names pointed  
 print ('L1 =', L1)
 ## output >>> L1 = ['a']
-## L1 is pointing to the now mutated object
+## although L1 was not specifically changed L1 is pointing to the now mutated object
 print ('L2 =', L2)
 ## output >>> L2 = ['a']
 ## L2 points to the same mutated object.
 
+
+
 L1 = [2]
 L2 = L1[:]
+## L2 is a new list filled with the snapshotted contents of L1
 L2[0] = 'a'
 print ('L1 =', L1)
 ## output >>> L1 = [2]
+## L2 pointed to a new object that happened to have the same contents as L1, however briefely that may have been.
 #+End_SRC
-- binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
-- 
-- Dictionaries
+  - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
+  - Dictionaries a set of key value pairs
+    - The values are mutable
+    - A Dict is an unordered prior to 3.5
+    - the indicies need not be integers.
+      - The indicies of a dict are called keys
+      - Keys are any immutable object
+      - 
 Tuples and lists are ordered sequences (dicts are now 3.5?)
  
 a slice is a range of values a subset
@@ -423,7 +438,11 @@ lists are more complicated than tuples
 Append is a list method list.append(foo) is similar to a function and can safely be consitered as an alternative syntax to the function append(list, foo).  Append mutates the list it is not assigning.  
 Methods have mutation as a side effect. Functions take input and preform computations and retun a value.  The original input remains unchanged.  If the retunred value is to be used it must be assigned to a variable for further computation.  A method is invoked precicely for the side effect, the modification of the object.
 Assigning a concatinated group of tuples
-** Lecture Stopped at 27:30
+
+** Alias
+Alias is pointing to the same object with different names.  This will have little effect if the object pointed to is immutable.  EG the int 3 is always 3 and we cannot change it.  If the object is mutable having multiple aliases can lead to unforeseen consequences.
+
+** Lecture Stopped at 43:00
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
