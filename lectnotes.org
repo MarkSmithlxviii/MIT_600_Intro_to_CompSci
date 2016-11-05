@@ -425,12 +425,13 @@ print ('L1 =', L1)
 #+End_SRC
   - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
   - Dictionaries a set of key value pairs
+    - Dicts are {'key' : value, 'pairs':'in a dict'}
     - The values are mutable
     - A Dict is an unordered prior to 3.5
     - the indicies need not be integers.
       - The indicies of a dict are called keys
-      - Keys are any immutable object
-      - 
+      - Keys are any immutable object, this is required to make the dict hashing work.
+    - del[key] is used to remove the key and value.
 Tuples and lists are ordered sequences (dicts are now 3.5?)
  
 a slice is a range of values a subset
@@ -441,8 +442,21 @@ Assigning a concatinated group of tuples
 
 ** Alias
 Alias is pointing to the same object with different names.  This will have little effect if the object pointed to is immutable.  EG the int 3 is always 3 and we cannot change it.  If the object is mutable having multiple aliases can lead to unforeseen consequences.
+** Answers to Questions on Session web page
+What is mutability
+Changing the value(s) of an object.  It is not creating a new object or reassigning a variable binding.
 
-** Lecture Stopped at 43:00
+What is the important difference between a list and a tuple
+A list is mutable, a tuple is not.
+
+What is cloning 
+Creating a copy of an object, two or more variable names will point to two or more identical objects, as opposed to ailiasing which will have two or more variable names pointing to the same object.  Cloning is a technique to mutate the values of an object without mutating the original object.
+
+What are the important aspects of a dictionary
+- The keys are immutable
+- the elements of a dict are {'key': value} pairs.
+- Unordered (before 3.5)
+** Lecture completed
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
