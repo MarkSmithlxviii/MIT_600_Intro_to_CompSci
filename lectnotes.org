@@ -457,6 +457,22 @@ What are the important aspects of a dictionary
 - the elements of a dict are {'key': value} pairs.
 - Unordered (before 3.5)
 ** Lecture completed
+* Lecture 6: Recursion
+Dicts can be implemented with lists however the look up time would be proportional to the length of the list, dict look ups are constant irriegardless of the size of the dict.
+Functions allow us to not rewrite in multiple locations, but more importantly gives us modular extraction ie. we dont have to find it in multiple locations.  Leads to the problem solving technique 'divide and conquer'.  Break a hard/big problem up into multiple easy/small problems.  Small problems have 2 advantages:
+1. Small problems are easier to solve
+2. Solutions to small problems can easily be combined to solve the big/hard problem.
+** Recursion 
+Not subtle, divide and conquer, recursion is used in two ways in computer science:
+- to describe the problem
+- to design a solutio to the problem.
+Recursion has 2  parts
+- the base case describes the simplest part, gives a direct answer, and
+- the inductive part
+  - this part is broken down into simpler parts plus some simpler operations to solve the problem
+For example:
+If I have a very weak computer that can only solve multiplication how do I solve b^n?
+Start by breaking down the problem.  
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 
