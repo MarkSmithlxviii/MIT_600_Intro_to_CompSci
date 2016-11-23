@@ -465,14 +465,30 @@ Functions allow us to not rewrite in multiple locations, but more importantly gi
 ** Recursion 
 Not subtle, divide and conquer, recursion is used in two ways in computer science:
 - to describe the problem
-- to design a solutio to the problem.
+- to design a solution to the problem.
 Recursion has 2  parts
 - the base case describes the simplest part, gives a direct answer, and
-- the inductive part
+- the recursive/inductive part
   - this part is broken down into simpler parts plus some simpler operations to solve the problem
 For example:
-If I have a very weak computer that can only solve multiplication how do I solve b^n?
-Start by breaking down the problem.  
+- If I have a very weak computer that can only solve multiplication how do I solve b^n?
+- Start by breaking down the problem. b^n=b*b^(n-1) if n>0 if n=0 b^n=1 or in Python:
+
+#+BEGIN_SRC Python
+# Simple recusion solution to b^n
+
+def simpleExp(b,n):
+    if n==0:
+       return 1
+    else:
+        return b * simpleExp(b, n-1) 
+
+#+END_SRC
+
+First step in programming is not writing code, the first step should be thing about how to break the problem into smaller bits to be solved recursively.
+
+** Lecture Stopped at 27:00
+** Divide and conquor at 12:00
 * useful commands
 raw_input (2.x) all input is of type str even for example 3.2
 bothraw_input and input (3.x) requires input to continue running the script. 

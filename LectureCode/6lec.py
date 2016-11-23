@@ -66,3 +66,10 @@
 ##def testFib(n):
 ##    for i in range(n+1):
 ##        print ('fib of', i, '=', fib(i))
+def simpleExp(b,n):
+    if n==0:
+       return 1
+    else:
+        return b * simpleExp(b, n-1)
+
+print(simpleExp(2,3))
