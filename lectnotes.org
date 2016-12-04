@@ -487,6 +487,7 @@ def simpleExp(b,n):
 
 First step in programming is not writing code, the first step should be thing about how to break the problem into smaller bits to be solved recursively.
 
+
 ** Lecture Stopped at 27:00
 ** Divide and conquor at 12:00
 * useful commands
