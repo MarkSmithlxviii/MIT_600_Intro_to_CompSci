@@ -408,7 +408,8 @@ L2[0] = 'a'
 ## Mutating the object to which both names pointed  
 print ('L1 =', L1)
 ## output >>> L1 = ['a']
-## although L1 was not specifically changed L1 is pointing to the now mutated object
+## although L1 was not specifically changed L1 is pointing to the
+## now mutated object
 print ('L2 =', L2)
 ## output >>> L2 = ['a']
 ## L2 points to the same mutated object.
@@ -421,7 +422,8 @@ L2 = L1[:]
 L2[0] = 'a'
 print ('L1 =', L1)
 ## output >>> L1 = [2]
-## L2 pointed to a new object that happened to have the same contents as L1, however briefely that may have been.
+## L2 pointed to a new object that happened to have the snapshotted contents 
+## as L1, however briefely that may have been.
 #+End_SRC
   - binding/assignment maps a name to an object.  Mutation changes the object list[1]='foo' is an example of mutation
   - Dictionaries a set of key value pairs
@@ -487,6 +489,7 @@ def simpleExp(b,n):
 
 First step in programming is not writing code, the first step should be thing about how to break the problem into smaller bits to be solved recursively.
 
+Recursion will stack up data and this may result in issues, the severity is language specific.  At 38:34 there is code not included in the lecture code that prints the stack effect to the screen.
 
 ** Lecture Stopped at 34:00
 ** Divide and conquor at 12:00
